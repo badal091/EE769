@@ -223,7 +223,7 @@ print(model.best_params_)
 price_prediction_KNN = model.predict(X_test)
 
 rms_KNN=np.sqrt(np.mean(np.power((np.array(Y_test)-np.array(price_prediction_KNN)),2)))
-rms
+rms_KNN
 
 # Evaluation metrices RMSE and MAE
 import math
@@ -567,7 +567,7 @@ pt.legend(['Actual_close','Train_close', 'Predicted_close'])
 pt.xlabel('Date')
 pt.ylabel('Price')
 
-"""##GRU + Hybrid"""
+"""##(GRU + LSTM) - Hybrid"""
 
 # reshape input to be [samples, time steps, features] which is required for LSTM
 X_train =X_train.reshape(X_train.shape[0],X_train.shape[1] , 1)
